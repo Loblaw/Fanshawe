@@ -1,0 +1,96 @@
+*,
+*:before,
+*:after {
+box-sizing: border-box;
+}
+/*will put asterik after name, phone and email*/
+.asterik:after { content:" *"; color: #e32;
+position: absolute;font-size: xx-large;}
+
+form {
+border: 2px solid #c6c7cc;
+border-radius: 5px;
+font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+overflow: hidden;
+width: 400px;
+}
+label {
+display: block;
+font-weight: bold;
+margin-bottom: 20px;
+}
+input {
+background: #fff;
+border: 1px solid #c6c7cc;
+box-shadow: inset 0 1px 1px rgba(0, 0, 0, .1);
+padding: 6px;
+margin-top: 6px;
+width: 100%;
+}
+button {
+background: linear-gradient(#49708f, #293f50);
+border: 2;
+cursor: pointer;
+font-weight: bold;
+float: left;
+padding: 8px 16px;
+}
+
+body {background: black repeat-x;}
+
+.purple {
+		color: Purple;
+		font-family: Calibri;
+		font-size: 2em;
+	}
+	
+.yellow {
+		color: Yellow;
+		font-family: Calibri;
+		font-size: 2em;
+	}
+	
+.white {
+		color: White;
+	}
+p, legend {
+		color: White;
+		font-weight: bold;
+	}
+	
+	img { /*created columns with img and forms to have picture in*/
+	margin-left: auto; /* left and right auto centers image*/
+    margin-right: auto;
+	padding-bottom:15px;
+	padding-left: 20px;
+	
+   }
+   form {
+	float: left;
+}
+
+/*transition to increase size of image*/
+img{
+	width: 370px;
+	height: 350px;
+	-webkit-transition: 3s;
+	-moz-transition: 3s;
+	transition: 3s;
+}
+
+img:hover {
+	width: 470px;
+	height: 450px;
+}
+
+	
+	/*medium screen*/
+
+@media screen and (max-width: 480px) {
+img {
+		float: none;   /* remove floats, make it single col layout */
+		width: 90%;
+		margin-bottom:1%;
+		padding-right: 4%;
+		margin-left:10px;
+	}
