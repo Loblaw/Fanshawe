@@ -1,0 +1,54 @@
+body { font-family: sans-serif; }
+
+.scene {
+  width: 200px;
+  height: 260px;
+  border: 1px solid #CCC;
+  margin: 40px 0;
+  perspective: 600px;
+  /*The .scene will house the 3D space*/
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+  transform-style: preserve-3d;
+  /*Now the .card element can be transformed in its parent’s 3D space. We’ll add width: 100%; and height: 100%; 
+  so the card’s transform-origin will occur in the center of container. 
+  position: relative is used to position card faces absolutely.*/
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 260px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  backface-visibility: hidden;
+  /*To position the faces in 3D space, we’ll need to reset their positions in 2D with position: 
+  absolute. In order to hide the back-side of the faces when they are faced away from the viewer, 
+  we use backface-visibility: hidden*/
+}
+
+/*To flip .card__face--back, we add a basic 3D transform of rotateY(180deg).*/
+
+.card__face--front {
+  background: red;
+}
+
+.card__face--back {
+  background: blue;
+  transform: rotateY(180deg);
+}
+
+/*With the faces in place, the .card requires a corresponding style for when it is flipped.*/
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
