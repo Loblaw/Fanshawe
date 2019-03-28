@@ -6,6 +6,7 @@ body { font-family: sans-serif; }
   border: 1px solid #CCC;
   margin: 40px 0;
   perspective: 600px;
+  transform-origin: center right;
 }
 
 .card {
@@ -18,7 +19,7 @@ body { font-family: sans-serif; }
 }
 
 .card.is-flipped {
-  transform: rotateY(180deg);
+  transform: translateX(100%) rotateY(-180deg);
 }
 
 .card__face {
