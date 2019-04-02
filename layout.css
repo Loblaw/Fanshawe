@@ -5,7 +5,7 @@ body {
 
 header {
 	font: 42px/2 Impact, sans-serif;
-	color: white;
+	color: black;/*white;*/
 	background-color: #BD4932;
 	text-shadow: 3px 3px #666;
 	text-align: center;
@@ -15,20 +15,25 @@ header {
 #wrap {
 	width: 85%;
 	margin: 0 auto;
-	background: #fff;
+	background: black;/*#fff;*/
 	overflow: auto;
 }
 
-#wrap h1 {
+#wrap h1{
 	font: 40px/2 Impact, sans-serif;
-	color: #666;
+	color: White;/*#666;*/
 	padding-left: 1%;
 }
 
-h2 {
+h2, p {
+	
+	color: White;/*#666;*/
+	padding-left: 1%;
+}
+/*h2 {
 	font: 32px/1.2 Impact, sans-serif;
 	color: #666;
-}
+}*/
 
 nav {
 	text-align: center;
@@ -39,11 +44,50 @@ nav li {
 	padding: 4%;
 }
 
-nav a {
-	font: 30px/1.4 Impact, sans-serif;
+/*nav a {
+	font: 30px/1.4  'Gloria Hallelujah', cursive;
 	color: #666;
 	text-decoration: none;
+}*/
+nav li{
+	display: inline;
+	border-right:1px solid;
+	border-color:white;
+	padding: 4%;
 }
+
+nav li:last-of-type {
+	border-right: none;/*found on google, removes last vertical right border*/
+}
+
+nav a{
+	font: 30px/1.4 Impact, sans-serif;
+	color: white;
+	text-decoration: none;
+	-webkit-transition: 3s;
+	-moz-transition: 3s;
+	transition: 3s;
+}
+
+nav a:hover { /*used nav a:hover because with just a:hover, it affected the footer links*/
+	font: 40px/1.4 'Gloria Hallelujah', cursive;/*increasing size, font-family and color to show effect*/
+	color: yellow;
+}
+
+h2{
+	font: 30px/1.4 Impact, sans-serif;
+	color: white;
+	text-decoration: none;
+	-webkit-transition: 3s;
+	-moz-transition: 3s;
+	transition: 3s;
+}
+
+h2:hover { /*used nav a:hover because with just a:hover, it affected the footer links*/
+	font: 40px/1.4 'Gloria Hallelujah', cursive;/*increasing size, font-family and color to show effect*/
+	color: yellow;
+}
+
 
 footer {
 	text-align: center;
@@ -64,10 +108,24 @@ footer a {
 
 section {
 	float: left;
+	margin-left: 10px;
+	margin-bottom:10px;
 	width: 46%;
-	border: 1px solid black;
+	border: 1px solid white;
 	border-radius: 25px;
 	padding: 20px 10px 10px 10px;
+}
+section img:hover{/*rotates the image when hover over*/
+		-webkit-animation: rotation 5s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(359deg);
+		}
 }
 
 section img {
@@ -75,19 +133,55 @@ section img {
 	padding-right: 1%;
 	padding-bottom: 1%;
 }
+/*transition to increase size of image*/
+section img{
+	width: 200px;
+	height: 150px;
+	-webkit-transition: 3s;
+	-moz-transition: 3s;
+	transition: 3s;
+}
+
+img:hover {
+	width: 300px;
+	height: 250px;
+}
 
 aside {
 	float: right;
+	margin-right:10px;
 	width: 46%;
-	border: 1px solid black;
+	border: 1px solid white;
 	border-radius: 25px;
 	padding: 20px 10px 10px 10px;
+}
+
+aside img:hover{/*rotates the image when hover over*/
+		-webkit-animation: rotation 5s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(359deg);
+		}
 }
 
 aside img {
 	float: left;
 	padding-right: 1%;
 	padding-bottom: 1%;
+}
+
+/*transition to increase size of image*/
+aside img{
+	width: 200px;
+	height: 150px;
+	-webkit-transition: 3s;
+	-moz-transition: 3s;
+	transition: 3s;
 }
 
 @media screen and (max-width: 768px) {
