@@ -5,24 +5,33 @@ body {
 
 header {
 	font: 42px/2 Impact, sans-serif;
+	font-style:italic;
 	color: black;/*white;*/
 	background-color: #BD4932;
 	text-shadow: 3px 3px #666;
 	text-align: center;
-	padding-top: 8%;
+	padding-top: 2%;/*was 8%, too big*/
 }
 
 #wrap {
-	width: 85%;
+	width: 77%;
 	margin: 0 auto;
 	background: black;/*#fff;*/
 	overflow: auto;
 }
 
 #wrap h1{
-	font: 40px/2 Impact, sans-serif;
+	font: 30px/2 Impact, sans-serif;
 	color: White;/*#666;*/
+	-webkit-transition: 3s;
+	-moz-transition: 3s;
+	transition: 3s;
 	padding-left: 1%;
+}
+
+#wrap h1:hover{ /*used nav a:hover because with just a:hover, it affected the footer links*/
+	font: 40px/1.4 'Gloria Hallelujah', cursive;/*increasing size, font-family and color to show effect*/
+	color: yellow;
 }
 
 h2, p {
@@ -102,8 +111,19 @@ footer li {
 
 footer a {
 	font: 30px/6 Impact, sans-serif;
-	color: white;
+	font-style:italic;
+	color: black;
+	text-shadow: 2px 2px #666;
 	text-decoration: none;
+	-webkit-transition: 3s;
+	-moz-transition: 3s;
+	transition: 3s;
+}
+
+footer a:hover { /*used nav a:hover because with just a:hover, it affected the footer links*/
+	font: 40px/1.4 'Gloria Hallelujah', cursive;/*increasing size, font-family and color to show effect*/
+	color: yellow;
+
 }
 
 section {
@@ -117,6 +137,52 @@ section {
 }
 section img:hover{/*rotates the image when hover over*/
 		-webkit-animation: rotation 5s infinite linear;
+}
+.sidenav {
+  float:left;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  -webkit-transition: 3s;
+	-moz-transition: 3s;
+	transition: 3s;
+}
+
+/*.sidenav ul ul a {
+  color: red;
+}*/
+
+.sidenav a:hover {
+  font: 40px/1.4 'Gloria Hallelujah', cursive;/*increasing size, font-family and color to show effect*/
+	color: yellow;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
 
 @-webkit-keyframes rotation {
@@ -194,14 +260,14 @@ aside img{
 	#wrap {
 	width: 85%;
 	margin: 0 auto;
-	background: #fff;
+	background: black;
 	overflow: auto;
 	padding-right: 3%;
 	}
 
 	#wrap h1 {
 	font: 35px/2 Impact, sans-serif;
-	color: #666;
+	color: white;
 	padding-left: 1%;
 	}
 
@@ -212,7 +278,7 @@ aside img{
 
 	nav a {
 	font: 25px/1.4 Impact, sans-serif;
-	color: #666;
+	color: white;
 	text-decoration: none;
 	}
 
