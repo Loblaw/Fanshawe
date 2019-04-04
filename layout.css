@@ -39,49 +39,6 @@ h2, p {
 	color: White;/*#666;*/
 	padding-left: 1%;
 }
-/*h2 {
-	font: 32px/1.2 Impact, sans-serif;
-	color: #666;
-}*/
-
-nav {
-	text-align: center;
-}
-
-nav li {
-	display: inline;
-	padding: 4%;
-}
-
-/*nav a {
-	font: 30px/1.4  'Gloria Hallelujah', cursive;
-	color: #666;
-	text-decoration: none;
-}*/
-nav li{
-	display: inline;
-	border-right:1px solid;
-	border-color:white;
-	padding: 4%;
-}
-
-nav li:last-of-type {
-	border-right: none;/*found on google, removes last vertical right border*/
-}
-
-nav a{
-	font: 30px/1.4 Impact, sans-serif;
-	color: white;
-	text-decoration: none;
-	-webkit-transition: 3s;
-	-moz-transition: 3s;
-	transition: 3s;
-}
-
-nav a:hover { /*used nav a:hover because with just a:hover, it affected the footer links*/
-	font: 40px/1.4 'Gloria Hallelujah', cursive;/*increasing size, font-family and color to show effect*/
-	color: yellow;
-}
 
 h2{
 	font: 30px/1.4 Impact, sans-serif;
